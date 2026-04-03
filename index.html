@@ -175,67 +175,66 @@
 
     <section class="resume-section" id="pipeline">
       <div class="section-header">
-        <h2>Real-time Data Pipeline & Visualization</h2>
-        <p>Interactive flow: Source System → Kafka → Apache Flink → Snowflake/Datawarehouse → Spring Boot + Angular Dashboard.</p>
+        <h2>Real-time Data Pipeline &amp; Visualization</h2>
+        <p>Animated, end-to-end flow from event sources to stream processing, storage, APIs, and live dashboards.</p>
       </div>
 
-      <article class="pipeline-showcase" data-flow-speed="1">
-        <div class="pipeline-controls">
-          <button type="button" class="btn btn-primary pipeline-action" data-action="start">Start Flow</button>
-          <button type="button" class="btn btn-outline-light pipeline-action" data-action="pause">Pause</button>
-          <button type="button" class="btn btn-outline-light pipeline-action" data-action="reset">Reset</button>
-          <label for="pipelineSpeed" class="pipeline-speed-label">Speed</label>
-          <select id="pipelineSpeed" class="pipeline-speed-select" aria-label="Flow speed">
-            <option value="0.6">Slow</option>
-            <option value="1" selected>Normal</option>
-            <option value="1.6">Fast</option>
-          </select>
-          <span class="pipeline-status" aria-live="polite">Status: Idle</span>
-        </div>
+      <article class="pipeline-showcase pipeline-architecture" aria-label="End-to-end real-time pipeline diagram">
+        <div class="pipeline-columns">
+          <section class="pipeline-block">
+            <h3>Source Layer</h3>
+            <div class="pipeline-stack">
+              <div class="pipeline-node"><strong>Client Events</strong><span>App interactions</span></div>
+              <div class="pipeline-node"><strong>Edge Signals</strong><span>Device telemetry</span></div>
+              <div class="pipeline-node"><strong>Service Logs</strong><span>Backend activity</span></div>
+              <div class="pipeline-node"><strong>Batch Feeds</strong><span>Periodic uploads</span></div>
+            </div>
+          </section>
 
-        <div class="pipeline-track" aria-label="End-to-end real-time pipeline flow">
-          <div class="pipeline-node is-source" data-stage="source">
-            <h3>Source System</h3>
-            <p>Events, app logs, clicks, telemetry</p>
-          </div>
-          <div class="pipeline-link" aria-hidden="true"><span class="flow-dot"></span></div>
+          <div class="pipeline-flow pipeline-flow-horizontal" aria-hidden="true"><span class="flow-dot"></span></div>
 
-          <div class="pipeline-node" data-stage="kafka">
-            <h3>Kafka</h3>
-            <p>High-throughput streaming ingestion</p>
-          </div>
-          <div class="pipeline-link" aria-hidden="true"><span class="flow-dot"></span></div>
+          <section class="pipeline-block pipeline-block-core">
+            <h3>Stream &amp; Processing Layer</h3>
+            <div class="pipeline-lane">
+              <div class="pipeline-mini-node">Raw Stream</div>
+              <div class="pipeline-flow pipeline-flow-mini" aria-hidden="true"><span class="flow-dot"></span></div>
+              <div class="pipeline-mini-node">Worker A</div>
+              <div class="pipeline-flow pipeline-flow-mini" aria-hidden="true"><span class="flow-dot"></span></div>
+              <div class="pipeline-mini-node">Prepared View A</div>
+            </div>
+            <div class="pipeline-lane">
+              <div class="pipeline-mini-node">Activity Stream</div>
+              <div class="pipeline-flow pipeline-flow-mini" aria-hidden="true"><span class="flow-dot"></span></div>
+              <div class="pipeline-mini-node">Worker B</div>
+              <div class="pipeline-flow pipeline-flow-mini" aria-hidden="true"><span class="flow-dot"></span></div>
+              <div class="pipeline-mini-node">Prepared View B</div>
+            </div>
+            <div class="pipeline-lane">
+              <div class="pipeline-mini-node">Metrics Stream</div>
+              <div class="pipeline-flow pipeline-flow-mini" aria-hidden="true"><span class="flow-dot"></span></div>
+              <div class="pipeline-mini-node">Worker C</div>
+              <div class="pipeline-flow pipeline-flow-mini" aria-hidden="true"><span class="flow-dot"></span></div>
+              <div class="pipeline-mini-node">Prepared View C</div>
+            </div>
+          </section>
 
-          <div class="pipeline-node is-core" data-stage="flink">
-            <h3>Apache Flink</h3>
-            <p>Real-time processing, joins, windows</p>
-          </div>
-          <div class="pipeline-link" aria-hidden="true"><span class="flow-dot"></span></div>
+          <div class="pipeline-flow pipeline-flow-horizontal" aria-hidden="true"><span class="flow-dot"></span></div>
 
-          <div class="pipeline-node" data-stage="warehouse">
-            <h3>Snowflake / Datawarehouse</h3>
-            <p>Curated, query-ready analytical data</p>
-          </div>
-          <div class="pipeline-link" aria-hidden="true"><span class="flow-dot"></span></div>
+          <section class="pipeline-block">
+            <h3>Serving Layer</h3>
+            <div class="pipeline-stack">
+              <div class="pipeline-node pipeline-node-wide"><strong>Monitoring</strong><span>Health and throughput tracking</span></div>
+              <div class="pipeline-node"><strong>Query Store</strong><span>Analytics-ready data</span></div>
+              <div class="pipeline-node"><strong>API Service</strong><span>Filtered access endpoints</span></div>
+              <div class="pipeline-node"><strong>Auth Service</strong><span>Session and token checks</span></div>
+            </div>
+          </section>
 
-          <div class="pipeline-node is-destination" data-stage="dashboard">
-            <h3>Spring Boot + Angular</h3>
-            <p>Live dashboards and actionable insights</p>
-          </div>
-        </div>
+          <div class="pipeline-flow pipeline-flow-horizontal" aria-hidden="true"><span class="flow-dot"></span></div>
 
-        <div class="pipeline-metrics">
-          <div class="metric-card">
-            <span class="metric-label">Events Ingested</span>
-            <strong class="metric-value" data-metric="ingested">0</strong>
-          </div>
-          <div class="metric-card">
-            <span class="metric-label">Processed in Flink</span>
-            <strong class="metric-value" data-metric="processed">0</strong>
-          </div>
-          <div class="metric-card">
-            <span class="metric-label">Dashboard Refreshes</span>
-            <strong class="metric-value" data-metric="dashboard">0</strong>
+          <div class="pipeline-node pipeline-terminal">
+            <strong>Web Client</strong>
+            <span>Live charts and reports</span>
           </div>
         </div>
       </article>
