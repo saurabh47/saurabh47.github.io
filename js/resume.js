@@ -58,6 +58,11 @@
     var ingestedMetric = pipelineShowcase.querySelector('[data-metric="ingested"]');
     var processedMetric = pipelineShowcase.querySelector('[data-metric="processed"]');
     var dashboardMetric = pipelineShowcase.querySelector('[data-metric="dashboard"]');
+    var BASE_INTERVAL_MS = 900;
+    var MIN_INTERVAL_MS = 280;
+    var INGESTED_INCREMENT = 120;
+    var PROCESSED_INCREMENT = 90;
+    var FLINK_STAGE_INDEX = 2;
 
     var counters = {
       ingested: 0,
@@ -91,15 +96,19 @@
       clearHighlights();
       nodes[currentStage].classList.add('is-active');
 
-      counters.ingested += 120;
-      if (currentStage >= 2) {
-        counters.processed += 90;
+      counters.ingested += INGESTED_INCREMENT;
+      if (currentStage >= FLINK_STAGE_INDEX) {
+        counters.processed += PROCESSED_INCREMENT;
       }
       if (currentStage === nodes.length - 1) {
         counters.dashboard += 1;
       }
 
       updateMetrics();
+    }
+
+    function getTickInterval() {
+      return Math.max(MIN_INTERVAL_MS, BASE_INTERVAL_MS / speed);
     }
 
     function setStatus(text) {
@@ -115,14 +124,13 @@
       pipelineShowcase.classList.add('is-running');
       pipelineShowcase.classList.remove('is-paused');
       setStatus('Status: Running');
-      timer = setInterval(tick, Math.max(280, 900 / speed));
+      timer = setInterval(tick, getTickInterval());
     }
 
     function pauseFlow() {
-      if (!timer) {
-        return;
+      if (timer) {
+        window.clearInterval(timer);
       }
-      window.clearInterval(timer);
       timer = null;
       pipelineShowcase.classList.remove('is-running');
       pipelineShowcase.classList.add('is-paused');
@@ -160,7 +168,7 @@
         pipelineShowcase.style.setProperty('--flow-speed', (1 / speed).toFixed(2));
         if (timer) {
           window.clearInterval(timer);
-          timer = setInterval(tick, Math.max(280, 900 / speed));
+          timer = setInterval(tick, getTickInterval());
         }
       });
       pipelineShowcase.style.setProperty('--flow-speed', (1 / speed).toFixed(2));
