@@ -337,7 +337,7 @@ a:active {
   flex-direction: column;
 }
 
-.certificate-card .certificate-link {
+.certificate-card .certificate-meta {
   color: #93c5fd;
   font-weight: 600;
 }
