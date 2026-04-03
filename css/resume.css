@@ -256,6 +256,12 @@ a:active {
   gap: 1rem;
 }
 
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .project-card,
 .info-card {
   border: 1px solid rgba(148, 163, 184, 0.2);
@@ -326,6 +332,16 @@ a:active {
   color: #fbbf24;
 }
 
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-card .certificate-link {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
 @media (max-width: 991.98px) {
   .portfolio-main {
     padding-left: 1rem;
@@ -347,7 +363,8 @@ a:active {
   }
 
   .project-grid,
-  .timeline-grid {
+  .timeline-grid,
+  .certificate-grid {
     grid-template-columns: 1fr;
   }
 
