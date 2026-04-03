@@ -21,6 +21,14 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0E890PMYX"></script>
   <script>
+    (function () {
+      var storedTheme = localStorage.getItem('theme');
+      var isDarkPreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = storedTheme || (isDarkPreferred ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
@@ -64,6 +72,9 @@
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificates">Certificates</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+          <li class="nav-item">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle color theme">🌙 Dark</button>
+          </li>
         </ul>
       </div>
     </div>
