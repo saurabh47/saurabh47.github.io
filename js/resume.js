@@ -49,4 +49,49 @@
     });
   }
 
+  var pipelineArchitecture = document.querySelector('.pipeline-architecture');
+  if (pipelineArchitecture) {
+    var pipelineChips = pipelineArchitecture.querySelectorAll('.pipeline-chip[data-pipeline-focus]');
+    var pipelineStatus = pipelineArchitecture.querySelector('[data-pipeline-status]');
+    var pipelineLayers = pipelineArchitecture.querySelectorAll('[data-pipeline-layer]');
+    var statusMessages = {
+      all: 'Showing all layers.',
+      source: 'Highlighting source events and inputs.',
+      stream: 'Highlighting Kafka, Flink, and Sink connector processing.',
+      serving: 'Highlighting serving layer components: databases, auth services, and monitoring.',
+      client: 'Highlighting application visualization endpoint.'
+    };
+
+    function setPipelineFocus(focusKey) {
+      var normalizedFocus = focusKey || 'all';
+      var showAll = normalizedFocus === 'all';
+
+      pipelineArchitecture.classList.toggle('is-filtering', !showAll);
+
+      Array.prototype.forEach.call(pipelineLayers, function(layerEl) {
+        var layerTags = (layerEl.getAttribute('data-pipeline-layer') || '').split(/\s+/);
+        var isMatch = showAll || layerTags.indexOf(normalizedFocus) !== -1;
+        layerEl.classList.toggle('is-match', isMatch);
+      });
+
+      Array.prototype.forEach.call(pipelineChips, function(chipEl) {
+        var isActive = chipEl.getAttribute('data-pipeline-focus') === normalizedFocus;
+        chipEl.classList.toggle('is-active', isActive);
+        chipEl.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      if (pipelineStatus) {
+        pipelineStatus.textContent = statusMessages[normalizedFocus] || statusMessages.all;
+      }
+    }
+
+    Array.prototype.forEach.call(pipelineChips, function(chipEl) {
+      chipEl.addEventListener('click', function() {
+        setPipelineFocus(chipEl.getAttribute('data-pipeline-focus'));
+      });
+    });
+
+    setPipelineFocus('all');
+  }
+
 })(jQuery); // End of use strict
