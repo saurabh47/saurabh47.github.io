@@ -67,6 +67,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Projects</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#pipeline">Pipeline</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificates">Certificates</a></li>
@@ -170,6 +171,74 @@
           <a class="project-link" href="https://github.com/saurabh47/School_Software_V1" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Source Code</a>
         </article>
       </div>
+    </section>
+
+    <section class="resume-section" id="pipeline">
+      <div class="section-header">
+        <h2>Real-time Data Pipeline & Visualization</h2>
+        <p>Interactive flow: Source System → Kafka → Apache Flink → Snowflake/Datawarehouse → Spring Boot + Angular Dashboard.</p>
+      </div>
+
+      <article class="pipeline-showcase" data-flow-speed="1">
+        <div class="pipeline-controls">
+          <button type="button" class="btn btn-primary pipeline-action" data-action="start">Start Flow</button>
+          <button type="button" class="btn btn-outline-light pipeline-action" data-action="pause">Pause</button>
+          <button type="button" class="btn btn-outline-light pipeline-action" data-action="reset">Reset</button>
+          <label for="pipelineSpeed" class="pipeline-speed-label">Speed</label>
+          <select id="pipelineSpeed" class="pipeline-speed-select" aria-label="Flow speed">
+            <option value="0.6">Slow</option>
+            <option value="1" selected>Normal</option>
+            <option value="1.6">Fast</option>
+          </select>
+          <span class="pipeline-status" aria-live="polite">Status: Idle</span>
+        </div>
+
+        <div class="pipeline-track" aria-label="End-to-end real-time pipeline flow">
+          <div class="pipeline-node is-source" data-stage="source">
+            <h3>Source System</h3>
+            <p>Events, app logs, clicks, telemetry</p>
+          </div>
+          <div class="pipeline-link" aria-hidden="true"><span class="flow-dot"></span></div>
+
+          <div class="pipeline-node" data-stage="kafka">
+            <h3>Kafka</h3>
+            <p>High-throughput streaming ingestion</p>
+          </div>
+          <div class="pipeline-link" aria-hidden="true"><span class="flow-dot"></span></div>
+
+          <div class="pipeline-node is-core" data-stage="flink">
+            <h3>Apache Flink</h3>
+            <p>Real-time processing, joins, windows</p>
+          </div>
+          <div class="pipeline-link" aria-hidden="true"><span class="flow-dot"></span></div>
+
+          <div class="pipeline-node" data-stage="warehouse">
+            <h3>Snowflake / Datawarehouse</h3>
+            <p>Curated, query-ready analytical data</p>
+          </div>
+          <div class="pipeline-link" aria-hidden="true"><span class="flow-dot"></span></div>
+
+          <div class="pipeline-node is-destination" data-stage="dashboard">
+            <h3>Spring Boot + Angular</h3>
+            <p>Live dashboards and actionable insights</p>
+          </div>
+        </div>
+
+        <div class="pipeline-metrics">
+          <div class="metric-card">
+            <span class="metric-label">Events Ingested</span>
+            <strong class="metric-value" data-metric="ingested">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Processed in Flink</span>
+            <strong class="metric-value" data-metric="processed">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Dashboard Refreshes</span>
+            <strong class="metric-value" data-metric="dashboard">0</strong>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section class="resume-section" id="education">
