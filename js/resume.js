@@ -24,4 +24,29 @@
     target: '#sideNav'
   });
 
+  var themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    var root = document.documentElement;
+
+    function updateThemeToggle(theme) {
+      if (theme === 'dark') {
+        themeToggle.textContent = '☀️ Light';
+        themeToggle.setAttribute('aria-label', 'Switch to light theme');
+      } else {
+        themeToggle.textContent = '🌙 Dark';
+        themeToggle.setAttribute('aria-label', 'Switch to dark theme');
+      }
+    }
+
+    var activeTheme = root.getAttribute('data-theme') || 'light';
+    updateThemeToggle(activeTheme);
+
+    themeToggle.addEventListener('click', function() {
+      var nextTheme = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+      root.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('theme', nextTheme);
+      updateThemeToggle(nextTheme);
+    });
+  }
+
 })(jQuery); // End of use strict
