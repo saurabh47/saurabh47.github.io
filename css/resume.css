@@ -342,7 +342,8 @@ a:active {
 }
 
 .project-meta,
-.meta {
+.meta,
+.certificate-card .certificate-meta {
   color: var(--meta);
   font-size: 0.85rem;
   font-weight: 600;
@@ -393,11 +394,6 @@ a:active {
 .certificate-card {
   display: flex;
   flex-direction: column;
-}
-
-.certificate-card .certificate-meta {
-  color: var(--meta);
-  font-weight: 600;
 }
 
 .theme-toggle {

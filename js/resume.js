@@ -38,7 +38,7 @@
       }
     }
 
-    var activeTheme = root.getAttribute('data-theme') || 'light';
+    var activeTheme = root.getAttribute('data-theme') || 'dark';
     updateThemeToggle(activeTheme);
 
     themeToggle.addEventListener('click', function() {
