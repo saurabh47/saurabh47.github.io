@@ -58,11 +58,13 @@
     var ingestedMetric = pipelineShowcase.querySelector('[data-metric="ingested"]');
     var processedMetric = pipelineShowcase.querySelector('[data-metric="processed"]');
     var dashboardMetric = pipelineShowcase.querySelector('[data-metric="dashboard"]');
-    var BASE_INTERVAL_MS = 900;
-    var MIN_INTERVAL_MS = 280;
-    var INGESTED_INCREMENT = 120;
-    var PROCESSED_INCREMENT = 90;
-    var FLINK_STAGE_INDEX = 2;
+    var ANIMATION_BASE_INTERVAL_MS = 900;
+    var ANIMATION_MIN_INTERVAL_MS = 280;
+    var INGESTED_INCREMENT_PER_TICK = 120;
+    var PROCESSED_INCREMENT_PER_TICK = 90;
+    var FLINK_STAGE_INDEX = nodes.findIndex(function(node) {
+      return node.getAttribute('data-stage') === 'flink';
+    });
 
     var counters = {
       ingested: 0,
@@ -96,9 +98,9 @@
       clearHighlights();
       nodes[currentStage].classList.add('is-active');
 
-      counters.ingested += INGESTED_INCREMENT;
-      if (currentStage >= FLINK_STAGE_INDEX) {
-        counters.processed += PROCESSED_INCREMENT;
+      counters.ingested += INGESTED_INCREMENT_PER_TICK;
+      if (FLINK_STAGE_INDEX !== -1 && currentStage >= FLINK_STAGE_INDEX) {
+        counters.processed += PROCESSED_INCREMENT_PER_TICK;
       }
       if (currentStage === nodes.length - 1) {
         counters.dashboard += 1;
@@ -108,7 +110,7 @@
     }
 
     function getTickInterval() {
-      return Math.max(MIN_INTERVAL_MS, BASE_INTERVAL_MS / speed);
+      return Math.max(ANIMATION_MIN_INTERVAL_MS, ANIMATION_BASE_INTERVAL_MS / speed);
     }
 
     function setStatus(text) {
@@ -165,13 +167,13 @@
     if (speedSelect) {
       speedSelect.addEventListener('change', function() {
         speed = parseFloat(speedSelect.value) || 1;
-        pipelineShowcase.style.setProperty('--flow-speed', (1 / speed).toFixed(2));
+        pipelineShowcase.style.setProperty('--flow-speed', speed.toFixed(2));
         if (timer) {
           window.clearInterval(timer);
           timer = setInterval(tick, getTickInterval());
         }
       });
-      pipelineShowcase.style.setProperty('--flow-speed', (1 / speed).toFixed(2));
+      pipelineShowcase.style.setProperty('--flow-speed', speed.toFixed(2));
     }
   }
 

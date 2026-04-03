@@ -499,7 +499,7 @@ a:active {
 
 .pipeline-showcase.is-running .flow-dot {
   opacity: 1;
-  animation: flowPulse calc(var(--flow-duration) * var(--flow-speed, 1)) linear infinite;
+  animation: flowPulse calc(var(--flow-duration) / var(--flow-speed, 1)) linear infinite;
 }
 
 .pipeline-showcase.is-paused .flow-dot {
