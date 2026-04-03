@@ -2,491 +2,236 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Portfolio of Saurabh Gangamwar — software developer building useful products and open source projects.">
+  <meta name="author" content="Saurabh Gangamwar">
 
-  <title>Saurabh Gangamwar</title>
+  <title>Saurabh Gangamwar | Portfolio</title>
 
-  <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-  <!-- in your header -->
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
   <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/brand.min.css">
 
-  <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
-  
-  <!-- Google tag (gtag.js) -->
+  <link href="css/resume.css" rel="stylesheet">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0E890PMYX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-W0E890PMYX');
   </script>
-  
-  <!-- Hotjar Tracking Code for https://saurabh.gangamwar.com -->
+
   <script>
     (function (h, o, t, j, a, r) {
       h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
       h._hjSettings = { hjid: 2969798, hjsv: 6 };
       a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
+      r = o.createElement('script');
+      r.async = 1;
       r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
       a.appendChild(r);
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
+
   <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-    data-id="saurabh47g" data-description="Support me on Buy me a coffee!" data-message="" data-color="#bd5d38db"
+    data-id="saurabh47g" data-description="Support me on Buy me a coffee!" data-message="" data-color="#4f46e5"
     data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-  <style>
-    .download-resume-btn {
-      margin-top: 40px;
-    }
-
-    @media only screen and (max-width: 800px) {
-      .download-resume-btn {
-        display: flex;
-        margin: 40px auto;
-      }
-
-      section.resume-section {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-      }
-    }
-
-    .btn-outline-secondary:hover {
-      color: #fff;
-      background-color: #bd5d38;
-      border-color: #bd5d38;
-    }
-
-    .download-resume-icon {
-      font-size: 20px;
-      margin-left: 10px;
-    }
-    
-    .fa-external-link {
-      font-size: 24px;
-    }
-  </style>
 </head>
 
 <body id="page-top">
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none"></span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <img class="brand-avatar" src="img/profile.jpg" alt="Saurabh Gangamwar profile">
+        <span>Saurabh Gangamwar</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Projects</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
+  <main class="container portfolio-main">
+    <section class="resume-section hero-section" id="about">
+      <div class="hero-content">
+        <p class="eyebrow">Software Developer • Product Builder</p>
+        <h1>Saurabh <span>Gangamwar</span></h1>
+        <p class="lead-text">I’m a self-taught developer focused on building practical, high-impact products. I love solving real problems with technology, learning quickly, and shipping fast.</p>
 
-  <div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-
-
-      <div class="my-auto">
-        <h2 class="mb-1">Saurabh
-          <span class="text-primary">Gangamwar</span>
-          </h1>
-          <div class="subheading mb-5">India <a href="tel:+919049799593">+91 9049-799593</a>.
-            <a href="mailto:saurabhgangamwar78@gmail.com">saurabhgangamwar78@gmail.com</a>
-          </div>
-          <p class="mb-5">I am a self-taught programmer, I love building stuff, traveling to new places, meeting new
-            people, developing new skills, and solving problems using Technology.</p>
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="https://twitter.com/saurabh47g" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/saurabhgangamwar/" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.youtube.com/c/electronicsforever1" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/saurabh47" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://saurabhgangamwar.medium.com/" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.hackerrank.com/saurabh47g/" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa cib-hackerrank fa-stack-1x fa-inverse" style="margin-top: 14px;"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://leetcode.com/saurabh47g/" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa cib-leetcode fa-stack-1x fa-inverse" style="margin-top:12px;"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-          <button class="btn btn-outline-secondary download-resume-btn"
-            onclick=" window.open('https://bit.ly/3CflDVk','_blank')">
-            Download Resume
-            <i class="fa fa-download download-resume-icon"></i>
-          </button>
-
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-      <div class="my-auto">
-        <h2 class="mb-5">Projects</h2>
-
-         <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0"><a class="btn-group-sm m-1" href="https://rent-receipt-generator.finwis.tech" target="_blank" rel="noopener noreferrer">Rent Receipt Generator <i class="fa fa-external-link m-1" aria-hidden="true"></i></a>
-              <a class="m-1" href="https://github.com/saurabh47/rent-receipt-generator" target="_blank" rel="noopener noreferrer"><i class="fa fa-github fa-solid"></i></a>
-            </h3>
-            <div class="subheading mb-3"></div>
-            <p>Generate FREE Rent Receipts without any water mark / branding</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2023 - Present</span>
-          </div>
-        </div>
-        
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">
-              <a href="https://saurabh47.github.io/whats-app-analytics/" target="_blank" rel="noopener noreferrer">Whats App Analytics <i class="fa fa-external-link m-1" aria-hidden="true"></i></a>
-              <a class="m-1" href="https://github.com/saurabh47/whats-app-analytics" target="_blank" rel="noopener noreferrer"><i class="fa fa-github fa-solid"></i></a>
-            </h3>
-            <div class="subheading mb-3"></div>
-            <p>Visualize your WhatsApp Chats !
-              Find Some Interesting Patterns ❤</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2022 - February 2022</span>
-          </div>
+        <div class="contact-row">
+          <a href="tel:+919049799593"><i class="fa fa-phone"></i> +91 9049-799593</a>
+          <a href="mailto:saurabhgangamwar78@gmail.com"><i class="fa fa-envelope"></i> saurabhgangamwar78@gmail.com</a>
+          <span><i class="fa fa-map-marker"></i> India</span>
         </div>
 
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">
-              <a href="https://www.npmjs.com/package/ngx-object-diff" target="_blank" rel="noopener noreferrer">NGX Object Diff Library <i class="fa fa-external-link m-1" aria-hidden="true"></i></a>
-              <a class="m-1" href="https://github.com/saurabh47/ngx-object-diff" target="_blank" rel="noopener noreferrer"><i class="fa fa-github fa-solid"></i></a>
-            </h3>
-            <div class="subheading mb-3"></div>
-            <p>An Open Source Angular 2+ library to compare and show object differences. This library published on NPM
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">May 2020 - Present</span>
-          </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://bit.ly/3CflDVk" target="_blank" rel="noopener noreferrer">Download Resume <i class="fa fa-download"></i></a>
+          <a class="btn btn-outline-light js-scroll-trigger" href="#experience">View Projects <i class="fa fa-arrow-right"></i></a>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0"><a href="https://play.google.com/store/apps/details?id=com.appdestro.www.MGM_COE&hl=en-US" target="_blank" rel="noopener noreferrer">College App <i class="fa fa-external-link m-1" aria-hidden="true"></i></a>
-            </h3>
-            <div class="subheading mb-3"></div>
-            <p>MGM college Android App.In this app students will get Notifications from college faculties.also they can
-              download new syllabus, notes ,university exam papers,New timetable & university result.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2017 - October 2017</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0"><a href="https://youtu.be/UlWUdcHhVt4" target="_blank" rel="noopener noreferrer">Humanoid Robot <i class="fa fa-external-link m-1" aria-hidden="true"></i></a></h3>
-            <div class="subheading mb-3"></div>
-            <p>we have made humanoid robot which can make body movements & talk like humans. please check project
-              link.programming languages used - Python and Arduino.Hardware used Raspberry and Arduino mega</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2017 - March 2017</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0"><a href="https://www.youtube.com/electronicsforever1" target="_blank" rel="noopener noreferrer"> YouTube Channel <i class="fa fa-external-link m-1" aria-hidden="true"></i></a></h3>
-            <div class="subheading mb-3">Electronic Forever YouTube Channel</div>
-            <p>All my electronics projects & tutorials available on my YouTube channel.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2016 - Present</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">
-              <a href="https://photos.app.goo.gl/pBdQjAy2eu7VJwVX8" target="_blank" rel="noopener noreferrer">School Software <i class="fa fa-external-link m-1" aria-hidden="true"></i></a>
-              <a class="m-1" href="https://github.com/saurabh47/School_Software_V1" target="_blank" rel="noopener noreferrer"><i class="fa fa-github fa-solid"></i></a>
-            </h3>
-            <div class="subheading mb-3"></div>
-            <p>I and my <a href="https://maheshmnj.github.io" target="_blank" rel="noopener noreferrer"> friend</a> developed a school software , which can generate
-              photocopy of Transfer Certificate,Bonafide, and any type of official document,We have built this software
-              using the javafx library to make this software look rich and premium we have made use of the jfoenix
-              library.JFoenix is an open source java library, that implements Google Material Design using java
-              components.
-            </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">April 2018 - May 2018</span>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-      <div class="my-auto">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Bachelor of Engineering</h3>
-            <div class="subheading mb-3">MGM College of Engineering,Nanded</div>
-            <div>Electronics and Telecommunication Engineering(ECT)</div>
-            <p>CGPA: 8.4</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2015 - May 2019</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">XII (Senior Secondary),Science</h3>
-            <div class="subheading mb-3">LATUR Board (Pratibha Niketan College,Nanded)</div>
-            <p>Percentage :72 %</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2013 - May 2015</span>
-          </div>
-        </div>
-
-
-        <div class="resume-item d-flex flex-column flex-md-row">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">X (Secondary)</h3>
-            <div class="subheading mb-3">LATUR Board (Gujarati High School,Nanded)</div>
-            <p>Percentage :84 %</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">Year Of Completion 2013</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-      <div class="my-auto">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline list-icons">
-          <li class="list-inline-item">
-            <i class="devicons devicon-nodejs-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-angularjs-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-mysql-plain-wordmark"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-typescript-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-nestjs-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-scala-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-nginx-original"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-docker-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicon-android-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicon-java-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicon-cplusplus-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicon-python-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicon-git-plain"></i>
-          </li>
-
-        </ul>
-
-        <!--           <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Functional Teams</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
-          </ul>
-        </div> -->
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-      <div class="my-auto">
-        <h2 class="mb-5">Interests</h2>
-        <p>Apart from being Coder, I enjoy most of my time being outdoors.I enjoy having dinner with my friends. </p>
-        <p class="mb-0">When forced indoors, I follow a number of sci-fi movies and television shows, I spend a large
-          amount of my free time exploring the latest technolgy advancements in the software development.I really like
-          to try new softwares</p>
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-      <div class="my-auto">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Android Developer
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Gem of MGM College Of Engineering
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - SGGS Institute of Engineering and Technology - Paper Presentation 2018 (Home Automation)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - MGM College of Engineering - Project Competition (VisioTech) 2017 (Humanoid Robot)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - SGGS Institute of Engineering and Technology - I Am Engineer Competition (Pragya) 2017 (Humanoid
-            Robot)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            2<sup>st</sup>
-            Place - Matoshri College of Engineering - Project Competition 2017 (Humanoid Robot)
-          </li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - SGGS Institute of Engineering and Technology - Innovative apps & Appliances Competition 2016 (Water
-            Supply Alert & Monitoring system)
-          </li>
-
+        <ul class="list-inline list-social-icons mb-0">
+          <li class="list-inline-item"><a href="https://twitter.com/saurabh47g" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.linkedin.com/in/saurabhgangamwar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+          <li class="list-inline-item"><a href="https://github.com/saurabh47" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github"></i></a></li>
+          <li class="list-inline-item"><a href="https://saurabhgangamwar.medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fa fa-medium"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.youtube.com/c/electronicsforever1" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.hackerrank.com/saurabh47g/" target="_blank" rel="noopener noreferrer" aria-label="HackerRank"><i class="fa cib-hackerrank"></i></a></li>
+          <li class="list-inline-item"><a href="https://leetcode.com/saurabh47g/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa cib-leetcode"></i></a></li>
         </ul>
       </div>
     </section>
 
-  </div>
+    <section class="resume-section" id="experience">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>A selection of products, open-source libraries, and experiments I’ve built.</p>
+      </div>
 
-  <!-- Bootstrap core JavaScript -->
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-meta">January 2023 — Present</div>
+          <h3><a href="https://rent-receipt-generator.finwis.tech" target="_blank" rel="noopener noreferrer">Rent Receipt Generator</a></h3>
+          <p>Generate free rent receipts instantly with no watermark or branding.</p>
+          <a class="project-link" href="https://github.com/saurabh47/rent-receipt-generator" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Source Code</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">January 2022 — February 2022</div>
+          <h3><a href="https://saurabh47.github.io/whats-app-analytics/" target="_blank" rel="noopener noreferrer">WhatsApp Analytics</a></h3>
+          <p>Visualize chat data to discover patterns and insights from WhatsApp conversations.</p>
+          <a class="project-link" href="https://github.com/saurabh47/whats-app-analytics" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Source Code</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">May 2020 — Present</div>
+          <h3><a href="https://www.npmjs.com/package/ngx-object-diff" target="_blank" rel="noopener noreferrer">NGX Object Diff Library</a></h3>
+          <p>Open-source Angular library to compare and display object differences.</p>
+          <a class="project-link" href="https://github.com/saurabh47/ngx-object-diff" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Source Code</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">August 2017 — October 2017</div>
+          <h3><a href="https://play.google.com/store/apps/details?id=com.appdestro.www.MGM_COE&hl=en-US" target="_blank" rel="noopener noreferrer">College App</a></h3>
+          <p>Android app for students to access notifications, notes, syllabus, papers, and results.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">January 2017 — March 2017</div>
+          <h3><a href="https://youtu.be/UlWUdcHhVt4" target="_blank" rel="noopener noreferrer">Humanoid Robot</a></h3>
+          <p>Built a humanoid robot with movement and speech using Python, Arduino, and Raspberry Pi.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">January 2016 — Present</div>
+          <h3><a href="https://www.youtube.com/electronicsforever1" target="_blank" rel="noopener noreferrer">YouTube Channel</a></h3>
+          <p>Electronics projects and tutorials published on Electronics Forever.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">April 2018 — May 2018</div>
+          <h3><a href="https://photos.app.goo.gl/pBdQjAy2eu7VJwVX8" target="_blank" rel="noopener noreferrer">School Software</a></h3>
+          <p>Desktop software for school document generation, built with JavaFX and JFoenix.</p>
+          <a class="project-link" href="https://github.com/saurabh47/School_Software_V1" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Source Code</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="resume-section" id="education">
+      <div class="section-header">
+        <h2>Education</h2>
+      </div>
+      <div class="timeline-grid">
+        <article class="info-card">
+          <h3>Bachelor of Engineering</h3>
+          <p class="meta">MGM College of Engineering, Nanded • August 2015 — May 2019</p>
+          <p>Electronics and Telecommunication Engineering (ECT)</p>
+          <p><strong>CGPA:</strong> 8.4</p>
+        </article>
+
+        <article class="info-card">
+          <h3>XII (Senior Secondary), Science</h3>
+          <p class="meta">LATUR Board (Pratibha Niketan College, Nanded) • August 2013 — May 2015</p>
+          <p><strong>Percentage:</strong> 72%</p>
+        </article>
+
+        <article class="info-card">
+          <h3>X (Secondary)</h3>
+          <p class="meta">LATUR Board (Gujarati High School, Nanded) • 2013</p>
+          <p><strong>Percentage:</strong> 84%</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="resume-section" id="skills">
+      <div class="section-header">
+        <h2>Skills & Tools</h2>
+      </div>
+      <ul class="list-inline list-icons">
+        <li class="list-inline-item"><i class="devicons devicon-nodejs-plain"></i></li>
+        <li class="list-inline-item"><i class="devicon-angularjs-plain"></i></li>
+        <li class="list-inline-item"><i class="devicon-mysql-plain-wordmark"></i></li>
+        <li class="list-inline-item"><i class="devicon-typescript-plain"></i></li>
+        <li class="list-inline-item"><i class="devicon-nestjs-plain"></i></li>
+        <li class="list-inline-item"><i class="devicon-scala-plain"></i></li>
+        <li class="list-inline-item"><i class="devicon-nginx-original"></i></li>
+        <li class="list-inline-item"><i class="devicon-docker-plain"></i></li>
+        <li class="list-inline-item"><i class="devicons devicon-android-plain"></i></li>
+        <li class="list-inline-item"><i class="devicons devicon-java-plain"></i></li>
+        <li class="list-inline-item"><i class="devicons devicon-cplusplus-plain"></i></li>
+        <li class="list-inline-item"><i class="devicons devicon-python-plain"></i></li>
+        <li class="list-inline-item"><i class="devicons devicon-git-plain"></i></li>
+      </ul>
+    </section>
+
+    <section class="resume-section" id="interests">
+      <div class="section-header">
+        <h2>Interests</h2>
+      </div>
+      <article class="info-card">
+        <p>Apart from coding, I enjoy traveling, spending time outdoors, and having meaningful conversations with friends.</p>
+        <p class="mb-0">When indoors, I watch sci-fi content and explore new technologies, tools, and software trends to continuously sharpen my craft.</p>
+      </article>
+    </section>
+
+    <section class="resume-section" id="awards">
+      <div class="section-header">
+        <h2>Awards & Certifications</h2>
+      </div>
+      <article class="info-card">
+        <ul class="fa-ul mb-0 awards-list">
+          <li><i class="fa-li fa fa-trophy"></i>Android Developer</li>
+          <li><i class="fa-li fa fa-trophy"></i>Gem of MGM College of Engineering</li>
+          <li><i class="fa-li fa fa-trophy"></i>1<sup>st</sup> Place — SGGS Institute of Engineering and Technology — Paper Presentation 2018 (Home Automation)</li>
+          <li><i class="fa-li fa fa-trophy"></i>1<sup>st</sup> Place — MGM College of Engineering — Project Competition (VisioTech) 2017 (Humanoid Robot)</li>
+          <li><i class="fa-li fa fa-trophy"></i>1<sup>st</sup> Place — SGGS Institute of Engineering and Technology — I Am Engineer Competition (Pragya) 2017 (Humanoid Robot)</li>
+          <li><i class="fa-li fa fa-trophy"></i>2<sup>nd</sup> Place — Matoshri College of Engineering — Project Competition 2017 (Humanoid Robot)</li>
+          <li><i class="fa-li fa fa-trophy"></i>1<sup>st</sup> Place — SGGS Institute of Engineering and Technology — Innovative Apps & Appliances Competition 2016 (Water Supply Alert & Monitoring System)</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
-
 </body>
 
 </html>
