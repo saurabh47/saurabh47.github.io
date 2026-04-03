@@ -58,10 +58,16 @@
     var ingestedMetric = pipelineShowcase.querySelector('[data-metric="ingested"]');
     var processedMetric = pipelineShowcase.querySelector('[data-metric="processed"]');
     var dashboardMetric = pipelineShowcase.querySelector('[data-metric="dashboard"]');
-    var ANIMATION_BASE_INTERVAL_MS = 900;
-    var ANIMATION_MIN_INTERVAL_MS = 280;
+    var BASE_TICK_INTERVAL_MS = 900;
+    var MIN_TICK_INTERVAL_MS = 280;
     var INGESTED_INCREMENT_PER_TICK = 120;
     var PROCESSED_INCREMENT_PER_TICK = 90;
+    var SOURCE_STAGE_INDEX = nodes.findIndex(function(node) {
+      return node.getAttribute('data-stage') === 'source';
+    });
+    var KAFKA_STAGE_INDEX = nodes.findIndex(function(node) {
+      return node.getAttribute('data-stage') === 'kafka';
+    });
     var FLINK_STAGE_INDEX = nodes.findIndex(function(node) {
       return node.getAttribute('data-stage') === 'flink';
     });
@@ -98,7 +104,9 @@
       clearHighlights();
       nodes[currentStage].classList.add('is-active');
 
-      counters.ingested += INGESTED_INCREMENT_PER_TICK;
+      if (currentStage === SOURCE_STAGE_INDEX || currentStage === KAFKA_STAGE_INDEX) {
+        counters.ingested += INGESTED_INCREMENT_PER_TICK;
+      }
       if (FLINK_STAGE_INDEX !== -1 && currentStage >= FLINK_STAGE_INDEX) {
         counters.processed += PROCESSED_INCREMENT_PER_TICK;
       }
@@ -110,7 +118,7 @@
     }
 
     function getTickInterval() {
-      return Math.max(ANIMATION_MIN_INTERVAL_MS, ANIMATION_BASE_INTERVAL_MS / speed);
+      return Math.max(MIN_TICK_INTERVAL_MS, BASE_TICK_INTERVAL_MS / speed);
     }
 
     function setStatus(text) {

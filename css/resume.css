@@ -499,6 +499,7 @@ a:active {
 
 .pipeline-showcase.is-running .flow-dot {
   opacity: 1;
+  /* --flow-speed is set by resume.js from the speed control to sync animation and simulation rate. */
   animation: flowPulse calc(var(--flow-duration) / var(--flow-speed, 1)) linear infinite;
 }
 
